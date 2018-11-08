@@ -66,8 +66,13 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("模块名"));
         pc.setParent("com.maolin.bootlink");
+        //pc.setModuleName(scanner("模块名"));
+        pc.setEntity("entity."+scanner("模块名"));
+        pc.setController("controller."+scanner("模块名"));
+        pc.setMapper("mapper."+scanner("模块名"));
+        pc.setService("service."+scanner("模块名"));
+        pc.setServiceImpl("service."+scanner("模块名")+".impl");
         mpg.setPackageInfo(pc);
 
         // 自定义配置

@@ -25,7 +25,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .select()
                 //swagger要扫描的包路径
-                .apis(RequestHandlerSelectors.basePackage("com.maolin.bootlink"))
+                .apis(RequestHandlerSelectors.basePackage("com.maolin.bootlink.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
