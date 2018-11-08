@@ -5,32 +5,24 @@ import com.maolin.bootlink.enums.ErrorCodeEnum;
 /**
  * Created by shaomaolin on 2018/11/8.
  */
-public class MessageException extends Exception {
+public class MessageException extends RuntimeException {
 
     private final String errMsg;
 
-    private final ErrorCodeEnum errCode;
 
-    public MessageException(ErrorCodeEnum errorCode,String errorMsg, String sysErrMsg) {
+    public MessageException(String errorMsg, String sysErrMsg) {
         super(sysErrMsg);
         this.errMsg = errorMsg;
-        this.errCode = errorCode;
     }
 
-    public MessageException(ErrorCodeEnum errorCode, String sysErrMsg, String userErrMsg, Throwable cause) {
+    public MessageException(String sysErrMsg, String errMsg, Throwable cause) {
         super(sysErrMsg, cause);
-        this.errMsg = userErrMsg;
-        this.errCode = errorCode;
+        this.errMsg = errMsg;
     }
 
-    public MessageException(ErrorCodeEnum errorCode, String sysErrMsg) {
-        super(sysErrMsg);
-        this.errMsg = null;
-        this.errCode = errorCode;
-    }
-
-    public ErrorCodeEnum getErrorCode() {
-        return errCode;
+    public MessageException(String errorMsg, Throwable cause) {
+        super(cause);
+        this.errMsg = errorMsg;
     }
 
     public String getUserErrMsg() {

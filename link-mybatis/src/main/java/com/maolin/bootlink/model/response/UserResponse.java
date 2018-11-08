@@ -1,7 +1,6 @@
 package com.maolin.bootlink.model.response;
 
 import com.maolin.bootlink.entity.user.SysUser;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
