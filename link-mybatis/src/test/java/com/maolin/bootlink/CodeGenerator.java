@@ -87,7 +87,7 @@ public class CodeGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
-                return projectPath + "/link-mybatis/src/main/resources/mapper/" + pc.getModuleName()
+                return projectPath + "/link-mybatis/src/main/resources/mapper/" + scanner("模块名")
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
