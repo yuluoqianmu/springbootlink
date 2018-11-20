@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
 @ServletComponentScan
-@MapperScan("com.maolin.bootlink.mapper.*")
+@MapperScan("com.maolin.bootlink.mapper")
 public class LinkMybatisApplication {
 
 	public static void main(String[] args) {

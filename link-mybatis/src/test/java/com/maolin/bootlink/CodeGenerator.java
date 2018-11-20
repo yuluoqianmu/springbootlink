@@ -68,11 +68,11 @@ public class CodeGenerator {
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.maolin.bootlink");
         //pc.setModuleName(scanner("模块名"));
-        pc.setEntity("entity."+scanner("模块名"));
-        pc.setController("controller."+scanner("模块名"));
-        pc.setMapper("mapper."+scanner("模块名"));
-        pc.setService("service."+scanner("模块名"));
-        pc.setServiceImpl("service."+scanner("模块名")+".impl");
+        pc.setEntity("entity");
+        pc.setController("controller");
+        pc.setMapper("mapper");
+        pc.setService("service");
+        pc.setServiceImpl("service.impl");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -87,7 +87,7 @@ public class CodeGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
-                return projectPath + "/link-mybatis/src/main/resources/mapper/" + scanner("模块名")
+                return projectPath + "/link-mybatis/src/main/resources/mapper/"
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });

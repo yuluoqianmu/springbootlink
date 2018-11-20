@@ -1,6 +1,5 @@
-package com.maolin.bootlink.entity.user;
+package com.maolin.bootlink.entity;
 
-import com.maolin.bootlink.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -11,7 +10,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author shaomaolin
- * @since 2018-11-08
+ * @since 2018-11-20
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -34,6 +33,11 @@ public class SysUser extends BaseEntity {
      * 邮箱
      */
     private String email;
+
+    /**
+     * 性别：1：男，0：女
+     */
+    private String gender;
 
 
 }

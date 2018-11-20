@@ -1,8 +1,8 @@
-package com.maolin.bootlink.service.user.impl;
+package com.maolin.bootlink.service.impl;
 
-import com.maolin.bootlink.entity.user.SysUser;
-import com.maolin.bootlink.mapper.user.SysUserMapper;
-import com.maolin.bootlink.service.user.ISysUserService;
+import com.maolin.bootlink.entity.SysUser;
+import com.maolin.bootlink.mapper.SysUserMapper;
+import com.maolin.bootlink.service.ISysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author shaomaolin
- * @since 2018-11-08
+ * @since 2018-11-20
  */
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements ISysUserService {

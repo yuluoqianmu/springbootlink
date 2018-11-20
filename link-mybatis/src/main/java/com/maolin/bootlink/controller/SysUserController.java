@@ -2,11 +2,10 @@ package com.maolin.bootlink.controller.user;
 
 
 import com.google.common.base.Preconditions;
-import com.maolin.bootlink.entity.user.SysUser;
-import com.maolin.bootlink.enums.ErrorCodeEnum;
+import com.maolin.bootlink.entity.SysUser;
 import com.maolin.bootlink.exception.MessageException;
 import com.maolin.bootlink.model.response.UserResponse;
-import com.maolin.bootlink.service.user.ISysUserService;
+import com.maolin.bootlink.service.ISysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

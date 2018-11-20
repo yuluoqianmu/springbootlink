@@ -1,6 +1,6 @@
-package com.maolin.bootlink.service.user;
+package com.maolin.bootlink.service;
 
-import com.maolin.bootlink.entity.user.SysUser;
+import com.maolin.bootlink.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author shaomaolin
- * @since 2018-11-08
+ * @since 2018-11-20
  */
 public interface ISysUserService extends IService<SysUser> {
 

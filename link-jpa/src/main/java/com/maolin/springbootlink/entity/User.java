@@ -1,4 +1,4 @@
-package com.maolin.springbootlink.model;
+package com.maolin.springbootlink.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -9,6 +9,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "sys_user")
 public class User {
+
+    private Long id;
 
 
 

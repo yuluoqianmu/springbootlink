@@ -1,6 +1,6 @@
-package com.maolin.bootlink.mapper.user;
+package com.maolin.bootlink.mapper;
 
-import com.maolin.bootlink.entity.user.SysUser;
+import com.maolin.bootlink.entity.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author shaomaolin
- * @since 2018-11-08
+ * @since 2018-11-20
  */
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
