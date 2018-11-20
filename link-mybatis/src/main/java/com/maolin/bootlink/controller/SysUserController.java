@@ -1,4 +1,4 @@
-package com.maolin.bootlink.controller.user;
+package com.maolin.bootlink.controller;
 
 
 import com.google.common.base.Preconditions;
