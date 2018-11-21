@@ -4,6 +4,7 @@ import com.maolin.linkshiro.assembler.UserAssembler;
 import com.maolin.linkshiro.entity.Permission;
 import com.maolin.linkshiro.entity.Role;
 import com.maolin.linkshiro.entity.User;
+import com.maolin.linkshiro.model.request.LoginRequest;
 import com.maolin.linkshiro.model.request.PermissionRequest;
 import com.maolin.linkshiro.model.request.RoleRequest;
 import com.maolin.linkshiro.model.request.UserRequest;
@@ -35,8 +36,6 @@ public class LoginController {
     @Autowired
     private IUserService userService;
 
-
-
     @Autowired
     private IPermissionService permissionService;
 
@@ -47,14 +46,11 @@ public class LoginController {
     }
 
     @ApiOperation("post登录")
-    @ApiImplicitParam(name = "map", value = "用户名和密码", required = true)
     @PostMapping("/login")
-    public String login(@RequestBody Map map){
+    public String login(LoginRequest loginRequest){
         //添加用户认证信息
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
-                map.get("username").toString(),
-                map.get("password").toString());
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(loginRequest.getUserName(), loginRequest.getPassword());
         //进行验证，这里可以捕获异常，然后返回对应信息
         subject.login(usernamePasswordToken);
         return "login";
@@ -77,20 +73,6 @@ public class LoginController {
     public String error(){
         return "error ok!";
     }
-
-    @ApiOperation("新增用户")
-    @PutMapping("/addUser")
-    public String addUser(UserRequest userRequest){
-        User user = new User();
-        BeanUtils.copyProperties(userRequest, user);
-        user.setId(UUID.randomUUID().toString());
-        userService.save(user);
-        return "addUser is ok! \n" + user;
-    }
-
-
-
-
 
     @ApiOperation("注解的使用")
     @RequiresRoles("admin")

@@ -36,9 +36,9 @@ public class UserRequest {
     private Integer state;
 
     /**
-     * 数据状态：1：有效，0：逻辑删除
+     * 数据状态：0：有效，1：逻辑删除
      */
-    @ApiModelProperty("数据状态：1：有效，0：逻辑删除")
+    @ApiModelProperty("数据状态：0：有效，1：逻辑删除")
     private Integer isDeleted;
 
 }
